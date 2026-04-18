@@ -23,7 +23,7 @@ const IDENTITY = {
 const DIPLOMES = [
   { annee: "2023 – 2025", titre: "BTM Pâtissier", lieu: "CMA / Orléans", detail: "Maître Artisan JSC / Maison JOUANNEAU à Neuville-aux-Bois" },
   { annee: "2022 – 2023", titre: "MC PGCCS", lieu: "CMA / Orléans", detail: "La Note Sucrée à Saint-Jean-de-la-Ruelle" },
-  { annee: "2020 – 2022", titre: "CAP Pâtissier", lieu: "CMA / Orléans", detail: "" }
+  { annee: "2020 – 2022", titre: "CAP Pâtissier", lieu: "CMA / Orléans", detail: "La Note Sucrée à Saint-Jean-de-la-Ruelle" }
 ];
 
 const EXPERIENCES = [
