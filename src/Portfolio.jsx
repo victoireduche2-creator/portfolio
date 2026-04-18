@@ -36,7 +36,7 @@ const EXPERIENCES = [
   { annee: "2020", titre: "Commis à l'épreuve pratique du BTM", lieu: "CMA Orléans" }
 ];
 
-const p = (folder, file) => `/img/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`;
+const p = (folder, file) => `${import.meta.env.BASE_URL}img/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`;
 
 const CATEGORIES = [
   {
