@@ -286,7 +286,7 @@ export default function Portfolio() {
           <div style={{ width: 40, height: 2, background: t.accent, borderRadius: 1, margin: "0 auto 32px" }} />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16, marginBottom: 16 }}>
+        <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 16 }}>
           {[
             { icon: "✉️", label: "Email", value: IDENTITY.email },
             { icon: "📱", label: "Téléphone", value: IDENTITY.phone },
@@ -323,6 +323,7 @@ export default function Portfolio() {
         }
         @media (max-width: 480px) {
           .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .contact-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </div>
