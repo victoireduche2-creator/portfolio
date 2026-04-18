@@ -286,7 +286,7 @@ export default function Portfolio() {
           <div style={{ width: 40, height: 2, background: t.accent, borderRadius: 1, margin: "0 auto 32px" }} />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16, marginBottom: 16 }}>
           {[
             { icon: "✉️", label: "Email", value: IDENTITY.email },
             { icon: "📱", label: "Téléphone", value: IDENTITY.phone },
