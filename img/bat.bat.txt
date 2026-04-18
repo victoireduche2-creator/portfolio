@@ -1,0 +1,34 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: === CONFIGURATION ===
+:: Dossier source (mettre "." pour dossier courant)
+set "SOURCE=."
+
+:: Qualité JPG (1 à 100) - nécessite ImageMagick
+set "QUALITY=90"
+
+:: === VERIFICATION ===
+where magick >nul 2>&1
+if errorlevel 1 (
+    echo ImageMagick n'est pas installe ou non ajoute au PATH.
+    echo Telecharge-le ici : https://imagemagick.org
+    pause
+    exit /b
+)
+
+echo Conversion des images en JPG...
+echo.
+
+:: Parcours récursif des fichiers image
+for /r "%SOURCE%" %%F in (*.png *.bmp *.gif *.tif *.tiff *.webp *.jpeg *.jfif) do (
+    set "FILE=%%~fF"
+    set "OUT=%%~dpnF.jpg"
+
+    echo Conversion : %%F
+    magick "%%F" -quality %QUALITY% "!OUT!"
+)
+
+echo.
+echo Conversion terminee.
+pause
